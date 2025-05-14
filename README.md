@@ -7,16 +7,11 @@ Fenwick Tree, bir dizideki belirli bir indise kadar olan ön toplamları (prefix
 Hem sorgulama (query) hem de güncelleme (update) işlemleri O(log n) zaman karmaşıklığında yapılır.  
 
 
-
-
-
-## Temel özellikleri 
+Temel özellikleri :
 
 -Prefix sum (örnek toplam ) Hesaplama  
--Güncelleme:
-Dizideki bir elemanın değerini değiştirmek, diğer elemanları da etkilemeden güncellenebilir
--Bellek kullanımı:
-Dizinin kendisi ile aynı boyutta bellek kullanır
+-Güncelleme: Dizideki bir elemanın değerini değiştirmek, diğer elemanları da etkilemeden güncellenebilir
+-Bellek kullanımı: Dizinin kendisi ile aynı boyutta bellek kullanır
 
 
 ## Çözüm Yaklaşımı 
@@ -75,7 +70,7 @@ Dezavantajları
 -Rekabetçi programlama: Çeşitli algoritmik problemlerin çözümü için kullanılabir
 
 
-## Kullanım Yerlerine Örnekler 
+Kullanım Yerlerine Örnekler 
 - Veri Bilimi ve İstatistik
 - Oyun Geliştirme
 - Yapay Zeka
@@ -97,9 +92,7 @@ Fenwick Tree’de, bir eleman güncellendiğinde, sadece o elemanın bağlı old
 Bir aralıktaki toplamı sorgulamak için, Fenwick Tree'deki prefix toplamları üzerinden gidilir. Örneğin, sum(1...i) sorgusu yapılırken, yalnızca ilgili bit düzeyindeki öğelere bakılır.
 
 
-
-## ÖRNEK
-
+ÖRNEK
 
 [1,2,3,4,5]'ten oluşan bir listeniz olduğunu düşünelim
 
