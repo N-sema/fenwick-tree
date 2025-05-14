@@ -1,3 +1,6 @@
+// kullanıcıdan input alan versiyon
+
+
 #include <iostream>
 #include <vector>
 using namespace std;
