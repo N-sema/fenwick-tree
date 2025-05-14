@@ -10,19 +10,19 @@ private:
 
 public:
     FenwickTree(const vector<int>& arr) {
-        n = arr.size() - 1; // 1. indeksden başlar
+        n = arr.size() - 1; // 1. indeksden baÃ¾lar
         bit.assign(n + 1, 0);
         original = arr;
 
-        // Fenwick ağacını oluştur
+        // Fenwick aÃ°acÃ½nÃ½ oluÃ¾tur
         for (int i = 1; i <= n; i++) {
-            update(i, arr[i], false); // İlk başta double güncelleme olmaması için false
+            update(i, arr[i], false); // Ãlk baÃ¾ta double gÃ¼ncelleme olmamasÃ½ iÃ§in false
         }
     }
 
     void update(int i, int val, bool updateOriginal = true) {
         if (updateOriginal)
-            original[i] += val; // Orijinal diziyi de günceller
+            original[i] += val; // Orijinal diziyi de gÃ¼nceller
 
         while (i <= n) {
             bit[i] += val;
@@ -52,7 +52,7 @@ public:
     }
 
     void printBIT() {
-        cout << "Fenwick ağacı (bit[]): ";
+        cout << "Fenwick tree (bit[]): ";
         for (int i = 1; i <= n; i++) {
             cout << bit[i] << " ";
         }
@@ -62,14 +62,14 @@ public:
 
 int main() {
     int size;
-    cout << "Dizinin eleman sayısını girin: ";
+    cout << "Dizinin eleman sayisini girin: ";
     cin >> size;
 
-    // 1-indeksli dizi için ilk eleman 0 olacak
+    // 1-indeksli dizi iÃ§in ilk eleman 0 olacak
     vector<int> arr(size + 1);
-    arr[0] = 0; // 0. indeks kullanılmaz
+    arr[0] = 0; // 0. indeks kullanÃ½lmaz
 
-    cout << "Dizinin elemanlarını girin:\n";
+    cout << "Dizinin elemanlarini girin:\n";
     for (int i = 1; i <= size; i++) {
         cout << "arr[" << i << "] = ";
         cin >> arr[i];
@@ -77,25 +77,25 @@ int main() {
 
     FenwickTree ft(arr);
 
-    cout << "\n--- Başlangıç ---" << endl;
+    cout << "\n--- BaslangÄ±c ---" << endl;
     ft.printOriginal();
     ft.printBIT();
 
     int l, r;
-    cout << " Toplam almak için aralığı girin (örn: 1 3): ";
+    cout << " Toplam almak iÃ§in araliÄŸi girin (Ã¶rn: 1 3): ";
     cin >> l >> r;
-    cout << l << "-" << r << " arası toplam: " << ft.rangeSum(l, r) << endl;
+    cout << l << "-" << r << " arasi toplam: " << ft.rangeSum(l, r) << endl;
 
     int idx, val;
-    cout << "Güncelleme yapmak için indeks ve eklenecek değeri girin (örn: 3 2): ";
+    cout << "GÃ¼ncelleme yapmak iÃ§in indeks ve eklenecek degeri girin (Ã¶rn: 3 2): ";
     cin >> idx >> val;
     ft.update(idx, val); // arr[idx] += val
 
-    cout << "\n--- Güncellemeden Sonra ---" << endl;
+    cout << "\n--- GÃ¼ncellemeden Sonra ---" << endl;
     ft.printOriginal();
     ft.printBIT();
 
-    cout << " Yeni " << l << "-" << r << " arası toplam: " << ft.rangeSum(l, r) << endl;
+    cout << " Yeni " << l << "-" << r << " arasi toplam: " << ft.rangeSum(l, r) << endl;
 
     return 0;
 }
