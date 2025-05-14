@@ -81,23 +81,17 @@ Kullanım Yerlerine Örnekler
 
 ## Nasıl Çalışır:
 
-  1 ) Başlangıç: Dizi ve Boyut Belirleme
-  Üzerinde işlem yapılacak orijinal diziyi (arr[]) belirle.
+  1 ) Başlangıç: Dizi ve Boyut Belirleme Üzerinde işlem yapılacak orijinal diziyi (arr[]) belirle.
 
-  Fenwick Tree için ayrı bir dizi oluştur: bit[] (aynı boyutta ya da +1 uzunlukta)
-  1 tabanlı indeksleme kullan. (Yani bit[0] kullanılmaz)
+  Fenwick Tree için ayrı bir dizi oluştur: bit[] (aynı boyutta ya da +1 uzunlukta 1 tabanlı indeksleme kullan. (Yani bit[0] kullanılmaz)
 
-  2 ) Fenwick Tree Dizisini Oluştur (Build)
-  Başlangıç dizisindeki her elemanı tek tek Fenwick Tree'ye ekle
+  2 ) Fenwick Tree Dizisini Oluştur (Build )Başlangıç dizisindeki her elemanı tek tek Fenwick Tree'ye ekle
   Bunun için her eleman için update(i, arr[i]) fonksiyonu çağrılır
 
-  3 ) Güncelleme Yap (Tekli Update)
-  update(index, value) fonksiyonuyla dizideki bir elemanı artır
-
+  3 ) Güncelleme Yap (Tekli Update) update(index, value) fonksiyonuyla dizideki bir elemanı artır
   index += (index & -index) formülüyle güncelleme zincirleme ilerler
 
-  4 ) Ön Toplam (Prefix Sum) Hesapla
-  query(i) fonksiyonu, 1’den i’ye kadar olan tüm değerlerin toplamını döndürür
+  4 ) Ön Toplam (Prefix Sum) Hesapla (query(i) fonksiyonu, 1’den i’ye kadar olan tüm değerlerin toplamını döndürür)
 
   i -= (i & -i) işlemiyle geri giderek gerekli hücrelerden veri toplanır
   Bu sayede uzun dizilerde bile çok hızlıca toplam elde edilir.
@@ -157,9 +151,15 @@ Değer:  1 3 3 10 5
 
 
 
-KAYNAKÇA
+##KAYNAKÇA
 A new data structure for cumulative frequency tables", Software: Practice and Experience, 24(3), 327–336.
 
-TopCoder Tutorials – Binary Indexed Trees
+Fenwick tree 
+https://en.wikipedia.org/wiki/Fenwick_tree#Applications
 
+TopCoder Tutorials – Binary Indexed Trees
+topcoder.com/community/competitive-programming/tutorials/binary-indexed-trees/
+
+Neden Fenwick Tree / enjoy algorithms
+https://www.enjoyalgorithms.com/blog/binary-indexed-tree
 
