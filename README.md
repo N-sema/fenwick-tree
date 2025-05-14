@@ -83,12 +83,15 @@ Kullanım Yerlerine Örnekler
 
   1 ) Başlangıç: Dizi ve Boyut Belirleme Üzerinde işlem yapılacak orijinal diziyi (arr[]) belirle.
 
-  Fenwick Tree için ayrı bir dizi oluştur: bit[] (aynı boyutta ya da +1 uzunlukta 1 tabanlı indeksleme kullan. (Yani bit[0] kullanılmaz)
+  Fenwick Tree için ayrı bir dizi oluştur: 
+  bit[] (aynı boyutta ya da +1 uzunlukta 1 tabanlı indeksleme kullan. (Yani bit[0] kullanılmaz)
 
-  2 ) Fenwick Tree Dizisini Oluştur (Build )Başlangıç dizisindeki her elemanı tek tek Fenwick Tree'ye ekle
+  2 ) Fenwick Tree Dizisini Oluştur (Build )
+  Başlangıç dizisindeki her elemanı tek tek Fenwick Tree'ye ekle
   Bunun için her eleman için update(i, arr[i]) fonksiyonu çağrılır
 
-  3 ) Güncelleme Yap (Tekli Update) update(index, value) fonksiyonuyla dizideki bir elemanı artır
+  3 ) Güncelleme Yap (Tekli Update) 
+  update(index, value) fonksiyonuyla dizideki bir elemanı artır
   index += (index & -index) formülüyle güncelleme zincirleme ilerler
 
   4 ) Ön Toplam (Prefix Sum) Hesapla (query(i) fonksiyonu, 1’den i’ye kadar olan tüm değerlerin toplamını döndürür)
@@ -116,7 +119,7 @@ Kullanım Yerlerine Örnekler
 
 Fenwick Ağacı: Başlangıçta sıfırlardan oluşan bir diziydi ve önek toplamlarını depolamak için güncellendi.
 Güncelleme Fonksiyonu
-update(i, value)`  `bit[i]`  `bit[i + (i & -i)]` gibi ilgili düğümler güncellenir.
+update(i, value)` `bit[i]` `bit[i + (i & -i)]` gibi ilgili düğümler güncellenir.
 
 update(1, 1)
 update(2, 2)
