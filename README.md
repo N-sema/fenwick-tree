@@ -82,13 +82,13 @@ Kullanım Yerlerine Örnekler
 ## Nasıl Çalışır:
 
 
-1) Dizi Temsili:
+1. Dizi Temsili:
 Fenwick Tree, genellikle 1 tabanlı diziler kullanır. Bu, indekslerin 1’den başladığı anlamına gelir. Bu özellik, binary işlemleri daha kolay ve anlaşılır hale getirir.
 
-2) Güncelleme (Update) İşlemi:
+2. Güncelleme (Update) İşlemi:
 Fenwick Tree’de, bir eleman güncellendiğinde, sadece o elemanın bağlı olduğu bir dizi öğe güncellenir. Güncelleme işlemi, O(log n) zaman alır.
 
-3) Sorgulama (Query) İşlemi:
+3. Sorgulama (Query) İşlemi:
 Bir aralıktaki toplamı sorgulamak için, Fenwick Tree'deki prefix toplamları üzerinden gidilir. Örneğin, sum(1...i) sorgusu yapılırken, yalnızca ilgili bit düzeyindeki öğelere bakılır.
 
 
@@ -101,7 +101,7 @@ Bir aralıktaki toplamı sorgulamak için, Fenwick Tree'deki prefix toplamları 
 
 Fenwick Ağacı: Başlangıçta sıfırlardan oluşan bir diziydi ve önek toplamlarını depolamak için güncellendi.
 Güncelleme Fonksiyonu
-update(i, value)` → `bit[i]`, `bit[i + (i & -i)]` gibi ilgili düğümler güncellenir.
+update(i, value)`  `bit[i]`  `bit[i + (i & -i)]` gibi ilgili düğümler güncellenir.
 
 update(1, 1)
 update(2, 2)
