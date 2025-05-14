@@ -81,13 +81,13 @@ Kullanım Yerlerine Örnekler
 
 ## Nasıl Çalışır:
 
-1) Başlangıç: Dizi ve Boyut Belirleme
+1 ) Başlangıç: Dizi ve Boyut Belirleme
 Üzerinde işlem yapılacak orijinal diziyi (arr[]) belirle.
 
 Fenwick Tree için ayrı bir dizi oluştur: bit[] (aynı boyutta ya da +1 uzunlukta).
  1 tabanlı indeksleme kullan. (Yani bit[0] kullanılmaz.)
 
-2) Fenwick Tree Dizisini Oluştur (Build)
+2 ) Fenwick Tree Dizisini Oluştur (Build)
 Başlangıç dizisindeki her elemanı tek tek Fenwick Tree'ye ekle.
 
 Bunun için her eleman için update(i, arr[i]) fonksiyonu çağrılır.
@@ -97,18 +97,18 @@ update(index, value) fonksiyonuyla dizideki bir elemanı artır.
 
 index += (index & -index) formülüyle güncelleme zincirleme ilerler.
 
-4) Ön Toplam (Prefix Sum) Hesapla
+4 ) Ön Toplam (Prefix Sum) Hesapla
 query(i) fonksiyonu, 1’den i’ye kadar olan tüm değerlerin toplamını döndürür.
 
 i -= (i & -i) işlemiyle geri giderek gerekli hücrelerden veri toplanır.
 
 Bu sayede uzun dizilerde bile çok hızlıca toplam elde edilir.
 
-5) Aralık Toplamı Hesapla (Range Sum)
+5 ) Aralık Toplamı Hesapla (Range Sum)
 Bir dizinin l ile r arasındaki toplamını hesaplamak için:
 Önce 1...r arası toplam alınır, sonra 1...(l-1) çıkarılır.
 
-6) Test Et ve Doğrula
+6 ) Test Et ve Doğrula
 
 
 
