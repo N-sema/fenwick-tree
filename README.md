@@ -81,15 +81,38 @@ Kullanım Yerlerine Örnekler
 
 ## Nasıl Çalışır:
 
+ 1. Başlangıç: Dizi ve Boyut Belirleme
+Üzerinde işlem yapılacak orijinal diziyi (arr[]) belirle.
 
-1. Dizi Temsili:
-Fenwick Tree, genellikle 1 tabanlı diziler kullanır. Bu, indekslerin 1’den başladığı anlamına gelir. Bu özellik, binary işlemleri daha kolay ve anlaşılır hale getirir.
+Fenwick Tree için ayrı bir dizi oluştur: bit[] (aynı boyutta ya da +1 uzunlukta).
+ 1 tabanlı indeksleme kullan. (Yani bit[0] kullanılmaz.)
 
-2. Güncelleme (Update) İşlemi:
-Fenwick Tree’de, bir eleman güncellendiğinde, sadece o elemanın bağlı olduğu bir dizi öğe güncellenir. Güncelleme işlemi, O(log n) zaman alır.
+ 2. Fenwick Tree Dizisini Oluştur (Build)
+Başlangıç dizisindeki her elemanı tek tek Fenwick Tree'ye ekle.
 
-3. Sorgulama (Query) İşlemi:
-Bir aralıktaki toplamı sorgulamak için, Fenwick Tree'deki prefix toplamları üzerinden gidilir. Örneğin, sum(1...i) sorgusu yapılırken, yalnızca ilgili bit düzeyindeki öğelere bakılır.
+Bunun için her eleman için update(i, arr[i]) fonksiyonu çağrılır.
+
+ 3. Güncelleme Yap (Tekli Update)
+update(index, value) fonksiyonuyla dizideki bir elemanı artır.
+
+index += (index & -index) formülüyle güncelleme zincirleme ilerler.
+
+ 4. Ön Toplam (Prefix Sum) Hesapla
+query(i) fonksiyonu, 1’den i’ye kadar olan tüm değerlerin toplamını döndürür.
+
+i -= (i & -i) işlemiyle geri giderek gerekli hücrelerden veri toplanır.
+
+Bu sayede uzun dizilerde bile çok hızlıca toplam elde edilir.
+
+5. Aralık Toplamı Hesapla (Range Sum)
+Bir dizinin l ile r arasındaki toplamını hesaplamak için:
+Önce 1...r arası toplam alınır, sonra 1...(l-1) çıkarılır.
+
+6. Test Et ve Doğrula
+
+
+
+
 
 
 ÖRNEK
