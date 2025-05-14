@@ -9,9 +9,9 @@ Hem sorgulama (query) hem de güncelleme (update) işlemleri O(log n) zaman karm
 
 Temel özellikleri :
 
--Prefix sum (örnek toplam ) Hesaplama  
--Güncelleme: Dizideki bir elemanın değerini değiştirmek, diğer elemanları da etkilemeden güncellenebilir
--Bellek kullanımı: Dizinin kendisi ile aynı boyutta bellek kullanır
+- Prefix sum (örnek toplam ) Hesaplama  
+- Güncelleme: Dizideki bir elemanın değerini değiştirmek, diğer elemanları da etkilemeden güncellenebilir
+- Bellek kullanımı: Dizinin kendisi ile aynı boyutta bellek kullanır
 
 
 ## Çözüm Yaklaşımı 
@@ -65,9 +65,9 @@ Dezavantajları
 
 
 ## Kullanım alanları:
--Aralık toplamı hesaplama: Bir dizinin belirli bir aralığındaki toplamı hızlıca hesaplamak için kullanılabilir 
--Veri tabanı sorguları: Veri tabanında belirli bir koşula göre verilerin toplamını hesaplamak için kullanılabilir.
--Rekabetçi programlama: Çeşitli algoritmik problemlerin çözümü için kullanılabir
+- Aralık toplamı hesaplama: Bir dizinin belirli bir aralığındaki toplamı hızlıca hesaplamak için kullanılabilir 
+- Veri tabanı sorguları: Veri tabanında belirli bir koşula göre verilerin toplamını hesaplamak için kullanılabilir.
+- Rekabetçi programlama: Çeşitli algoritmik problemlerin çözümü için kullanılabir
 
 
 Kullanım Yerlerine Örnekler 
@@ -82,13 +82,13 @@ Kullanım Yerlerine Örnekler
 ## Nasıl Çalışır:
 
 
--Dizi Temsili:
+1) Dizi Temsili:
 Fenwick Tree, genellikle 1 tabanlı diziler kullanır. Bu, indekslerin 1’den başladığı anlamına gelir. Bu özellik, binary işlemleri daha kolay ve anlaşılır hale getirir.
 
--Güncelleme (Update) İşlemi:
+2) Güncelleme (Update) İşlemi:
 Fenwick Tree’de, bir eleman güncellendiğinde, sadece o elemanın bağlı olduğu bir dizi öğe güncellenir. Güncelleme işlemi, O(log n) zaman alır.
 
--Sorgulama (Query) İşlemi:
+3) Sorgulama (Query) İşlemi:
 Bir aralıktaki toplamı sorgulamak için, Fenwick Tree'deki prefix toplamları üzerinden gidilir. Örneğin, sum(1...i) sorgusu yapılırken, yalnızca ilgili bit düzeyindeki öğelere bakılır.
 
 
