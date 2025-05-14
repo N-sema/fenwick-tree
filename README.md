@@ -1,12 +1,17 @@
 
 ## Fenwick Tree ( Binary Indexed Tree - BIT)
 
+
 Fenwick Tree, bir dizideki belirli bir indise kadar olan ön toplamları (prefix sum) hızlıca hesaplamak ve elemanları güncellemek için kullanılan özel bir veri yapısıdır.
 
 Hem sorgulama (query) hem de güncelleme (update) işlemleri O(log n) zaman karmaşıklığında yapılır.  
 
 
+
+
+
 ## Temel özellikleri 
+
 -Prefix sum (örnek toplam ) Hesaplama  
 -Güncelleme:
 Dizideki bir elemanın değerini değiştirmek, diğer elemanları da etkilemeden güncellenebilir
@@ -81,6 +86,7 @@ Dezavantajları
 
 ## Nasıl Çalışır:
 
+
 -Dizi Temsili:
 Fenwick Tree, genellikle 1 tabanlı diziler kullanır. Bu, indekslerin 1’den başladığı anlamına gelir. Bu özellik, binary işlemleri daha kolay ve anlaşılır hale getirir.
 
@@ -89,6 +95,7 @@ Fenwick Tree’de, bir eleman güncellendiğinde, sadece o elemanın bağlı old
 
 -Sorgulama (Query) İşlemi:
 Bir aralıktaki toplamı sorgulamak için, Fenwick Tree'deki prefix toplamları üzerinden gidilir. Örneğin, sum(1...i) sorgusu yapılırken, yalnızca ilgili bit düzeyindeki öğelere bakılır.
+
 
 
 ## ÖRNEK
