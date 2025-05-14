@@ -23,7 +23,6 @@ Güncelleme ve sorgulama işlemleri, indekslerin ikili gösterimindeki en düş�
 Fenwick Tree’de her hücre, dizideki belirli bir aralık (segment) üzerindeki toplamdan sorumludur. Hangi hücrenin hangi aralığı kapsadığı, hücrenin indeksinin ikili (binary) gösteriminde sağdan ilk "1" bitinin bulunduğu pozisyona göre belirlenir. Bu sayede her hücre, önceden belirlenmiş bir alt aralığın toplamını temsil eder.
 
 
-
 ## Ne Zaman Kulanılır
 
 - Prefix Sum (Ön Toplam) işlemlerinin sık yapıldığı durumlarda
@@ -39,6 +38,7 @@ Fenwick Tree’de her hücre, dizideki belirli bir aralık (segment) üzerindeki
 - Rekabetçi Prgramlama için ideal 
 
 
+
 ## Karmaşıklık analizi
 
 - Zaman Karmaşıklığı 
@@ -49,37 +49,13 @@ O (n) karmaşıklığına sahiptir
 
 
 
-## Avantajları ve Dezavantajları 
-
-Avantajları
-- zaman verimliliği (O(logn) karmaşıklığa sahip )
-- basitlik (uygulaması kolay )
-- alan verimliliği (O(n) kadar yer kaplar )
-- büyük veri setlerinde hızlıdır  
-
-Dezavantajları 
-- sadece toplama işlemleri için uygun 
-- aralık güncellemeleri zor 
 
 
 
 
-## Kullanım alanları:
-- Aralık toplamı hesaplama: Bir dizinin belirli bir aralığındaki toplamı hızlıca hesaplamak için kullanılabilir 
-- Veri tabanı sorguları: Veri tabanında belirli bir koşula göre verilerin toplamını hesaplamak için kullanılabilir.
-- Rekabetçi programlama: Çeşitli algoritmik problemlerin çözümü için kullanılabir
 
 
-Kullanım Yerlerine Örnekler 
-- Veri Bilimi ve İstatistik
-- Oyun Geliştirme
-- Yapay Zeka
-- Genetik ve Biyoinformatik 
-- veri tabanı ve Sorgulama Sistemleri
-- Zaman Serisi Verileri
-
-
-## Nasıl Çalışır:
+## Algoritma Adımları ( Nasıl Çalışır ? ):
 
   1 ) Başlangıç: Dizi ve Boyut Belirleme Üzerinde işlem yapılacak orijinal diziyi (arr[]) belirle.
 
@@ -145,8 +121,33 @@ Dizin:  1 2 3 4 5
 
 Değer:  1 3 3 10 5
 
+## Kullanım alanları:
+- Aralık toplamı hesaplama: Bir dizinin belirli bir aralığındaki toplamı hızlıca hesaplamak için kullanılabilir 
+- Veri tabanı sorguları: Veri tabanında belirli bir koşula göre verilerin toplamını hesaplamak için kullanılabilir.
+- Rekabetçi programlama: Çeşitli algoritmik problemlerin çözümü için kullanılabir
 
 
+Kullanım Yerlerine Örnekler 
+- Veri Bilimi ve İstatistik
+- Oyun Geliştirme
+- Yapay Zeka
+- Genetik ve Biyoinformatik 
+- veri tabanı ve Sorgulama Sistemleri
+- Zaman Serisi Verileri
+
+
+
+## Avantajları ve Dezavantajları 
+
+Avantajları
+- zaman verimliliği (O(logn) karmaşıklığa sahip )
+- basitlik (uygulaması kolay )
+- alan verimliliği (O(n) kadar yer kaplar )
+- büyük veri setlerinde hızlıdır  
+
+Dezavantajları 
+- sadece toplama işlemleri için uygun 
+- aralık güncellemeleri zor 
 
 
 
