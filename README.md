@@ -26,10 +26,10 @@ Fenwick Tree’de her hücre, dizideki belirli bir aralık (segment) üzerindeki
 
 ## Ne Zaman Kulanılır
 
--Prefix Sum (Ön Toplam) işlemlerinin sık yapıldığı durumlarda
--Sürekli güncellenen bir dizi varsa
--Zaman karmaşıklığı önemliyse
--Çok sayıda range-sum ve tekli update işlemi gerekiyorsa Fenwick Tree kullanılabilir
+- Prefix Sum (Ön Toplam) işlemlerinin sık yapıldığı durumlarda
+- Sürekli güncellenen bir dizi varsa
+- Zaman karmaşıklığı önemliyse
+- Çok sayıda range-sum ve tekli update işlemi gerekiyorsa Fenwick Tree kullanılabilir
 
 
 ## Neden Fenwick Tree ?
@@ -41,7 +41,7 @@ Fenwick Tree’de her hücre, dizideki belirli bir aralık (segment) üzerindeki
 
 ## Karmaşıklık analizi
 
--Zaman Karmaşıklığı 
+- Zaman Karmaşıklığı 
 Güncelleme ve sorgu işlemi için O(log n) kullanır. Bu nedenle büyük veri setlerinde özellikle sıklıkla yapılan sorgulamalar ve güncellemeler için çok etkilidir
 
 - Uzay Karmaşıklığı 
