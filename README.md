@@ -155,7 +155,7 @@ Dezavantajları
 
 
 
-##KAYNAKÇA
+## KAYNAKÇA
 A new data structure for cumulative frequency tables", Software: Practice and Experience, 24(3), 327–336.
 
 Fenwick tree 
