@@ -1,7 +1,9 @@
 
-## Fenwick tree ( Binary Indexed Tree - BIT)
+## Fenwick Tree ( Binary Indexed Tree - BIT)
 
-Fenwick Tree , bir dizi üzerindeki prefix sum (ön toplam) gibi işlemleri verimli şekilde gerçekleştirmek için kullanılan bir veri yapısıdır. Özellikle güncelleme ve toplam alma işlemleri için tercih edilir . Kısaca bir dizideki belirli bir indise kadar olan tüm değerlerin toplamını bulmaya yarar  
+Fenwick Tree, bir dizideki belirli bir indise kadar olan ön toplamları (prefix sum) hızlıca hesaplamak ve elemanları güncellemek için kullanılan özel bir veri yapısıdır.
+
+Hem sorgulama (query) hem de güncelleme (update) işlemleri O(log n) zaman karmaşıklığında yapılır.  
 
 
 ## Temel özellikleri 
@@ -10,6 +12,41 @@ Fenwick Tree , bir dizi üzerindeki prefix sum (ön toplam) gibi işlemleri veri
 Dizideki bir elemanın değerini değiştirmek, diğer elemanları da etkilemeden güncellenebilir
 -Bellek kullanımı:
 Dizinin kendisi ile aynı boyutta bellek kullanır
+
+
+## Çözüm Yaklaşımı 
+
+Fenwick Tree’nin temelinde ikilik (binary) sayı sistemi ve bit düzeyinde işlemler (bit manipülasyonu) yer alır. Bu yapı, dizideki bazı toplamları (örneğin prefix sum) saklamak ve hızlı sorgulamalar yapabilmek için özel bir şekilde tasarlanmıştır.
+
+Güncelleme ve sorgulama işlemleri, indekslerin ikili gösterimindeki en düşük pozitif (1 olan) bitten yararlanılarak yapılır. Bu bite RSB (rightmost set bit) denir.
+
+Fenwick Tree’de her hücre, dizideki belirli bir aralık (segment) üzerindeki toplamdan sorumludur. Hangi hücrenin hangi aralığı kapsadığı, hücrenin indeksinin ikili (binary) gösteriminde sağdan ilk "1" bitinin bulunduğu pozisyona göre belirlenir. Bu sayede her hücre, önceden belirlenmiş bir alt aralığın toplamını temsil eder.
+
+
+
+## Ne Zaman Kulanılır
+
+-Prefix Sum (Ön Toplam) işlemlerinin sık yapıldığı durumlarda
+-Sürekli güncellenen bir dizi varsa
+-Zaman karmaşıklığı önemliyse
+-Çok sayıda range-sum ve tekli update işlemi gerekiyorsa Fenwick Tree kullanılabilir
+
+
+## Neden Fenwick Tree ?
+- Hızlı
+- Bellek Dostu 
+- Kolay Kodlanabilir
+- Rekabetçi Prgramlama için ideal 
+
+
+## Karmaşıklık analizi
+
+-Zaman Karmaşıklığı 
+Güncelleme ve sorgu işlemi için O(log n) kullanır. Bu nedenle büyük veri setlerinde özellikle sıklıkla yapılan sorgulamalar ve güncellemeler için çok etkilidir
+
+- Uzay Karmaşıklığı 
+O (n) karmaşıklığına sahiptir 
+
 
 
 ## Avantajları ve Dezavantajları 
@@ -25,8 +62,6 @@ Dezavantajları
 - aralık güncellemeleri zor 
 
 
-## Karmaşıklık analizi
-Güncelleme ve sorgu işlemi için O(log n) kullanır. Bu nedenle büyük veri setlerinde özellikle sıklıkla yapılan sorgulamalar ve güncellemeler için çok etkiilidir
 
 
 ## Kullanım alanları:
@@ -34,6 +69,14 @@ Güncelleme ve sorgu işlemi için O(log n) kullanır. Bu nedenle büyük veri s
 -Veri tabanı sorguları: Veri tabanında belirli bir koşula göre verilerin toplamını hesaplamak için kullanılabilir.
 -Rekabetçi programlama: Çeşitli algoritmik problemlerin çözümü için kullanılabir
 
+
+## Kullanım Yerlerine Örnekler 
+- Veri Bilimi ve İstatistik
+- Oyun Geliştirme
+- Yapay Zeka
+- Genetik ve Biyoinformatik 
+- veri tabanı ve Sorgulama Sistemleri
+- Zaman Serisi Verileri
 
 
 ## Nasıl Çalışır:
@@ -83,6 +126,13 @@ bit[5] = 5 → sadece arr[5]
 Dizin:  1 2 3 4 5
 
 Değer:  1 3 3 10 5
+
+
+
+
+
+
+
 
 
 
